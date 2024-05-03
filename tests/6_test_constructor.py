@@ -1,5 +1,5 @@
-from config import URL
-from locators import StellarLocators
+from tests.config import URL
+from tests.locators import StellarLocators
 
 class TestStellarBurgers:
 

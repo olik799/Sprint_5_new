@@ -1,8 +1,8 @@
 from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
 
-from config import URL
-from locators import StellarLocators
+from tests.config import URL
+from tests.locators import StellarLocators
 
 email = 'olgaz57777@yandex.ru'
 password = '1234567'

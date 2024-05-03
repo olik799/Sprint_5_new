@@ -3,8 +3,8 @@ import random
 from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
 
-from config import URL
-from locators import StellarLocators
+from tests.config import URL
+from tests.locators import StellarLocators
 
 name = 'Olga'
 email = f'olgaz5{random.randint(100,999)}@yandex.ru'
