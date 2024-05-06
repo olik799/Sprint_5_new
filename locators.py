@@ -1,8 +1,8 @@
 from selenium.webdriver.common.by import By
 
 class StellarLocators:
-    NAME_FIELD = (By.XPATH, "//form/fieldset[1]/div/div/input") # форма регистрации поле Имя
-    EMAIL_FIELD = (By.XPATH, "//form/fieldset[2]/div/div/input") # форма регистрации поле email
+    NAME_FIELD = (By.XPATH, "//label[text()='Имя']/following::input")  # форма регистрации поле Имя
+    EMAIL_FIELD = (By.XPATH, "//label[text()='Email']/following::input")  # форма регистрации поле email
     PASSWORD_FIELD = (By.NAME, "Пароль") # форма регистрации поле Пароль
     REGISTER_BUTTON = (By.XPATH, "//button[text()='Зарегистрироваться']") # форма регистрации кнопка Зарегистрироваться
 
@@ -16,7 +16,6 @@ class StellarLocators:
 
 # Вход в личный кабинет
     INPUT_HEADER = (By.XPATH, "//h2[text()='Вход']") # заголовок Вход
-    EMAIL_FIELD_IN = (By.XPATH, "//form/fieldset[1]/div/div/input")  # вход поле email
     INVALID_PASSWORD = ((By.XPATH, "//p[contains(@class, 'input__error')]")) # сообщение некорректный пароль
 
 # Выход из аккаунта
@@ -25,12 +24,8 @@ class StellarLocators:
 # Раздел Конструктор
     CONSTRUCTOR_BUTTON = (By.XPATH, "//p[text()='Конструктор']") # конструктор
     STELLAR_LOGO = (By.XPATH, "//div[contains(@class, 'logo')]") # логотип
+    MAKE_BURGER_HEADER = (By.XPATH, "//h1[text()='Соберите бургер']")  # конструктор Булки
 
-    BREAD_BUTTON = (By.XPATH, "//main/section[1]/div[1]/div[1]") # конструктор Булки
-    BREAD_HEADER = (By.XPATH, "//h2[text()='Булки']") # раздел Булки
-
-    SAUCE_BUTTON = (By.XPATH, "//main/section[1]/div[1]/div[2]") # конструктор Соусы
-    SAUCE_HEADER = (By.XPATH, "//h2[text()='Соусы']") # раздел Соусы
-
-    TOPPING_BUTTON = (By.XPATH, "//main/section[1]/div[1]/div[3]") # конструктор Начинки
-    TOPPING_HEADER = (By.XPATH, "//h2[text()='Начинки']") # раздел Начинки
+    BREAD_BUTTON = (By.XPATH, "//span[text()='Булки']/parent::div") # конструктор Булки
+    SAUCE_BUTTON = (By.XPATH, "//span[text()='Соусы']/parent::div") # конструктор Соусы
+    TOPPING_BUTTON = (By.XPATH, "//span[text()='Начинки']/parent::div") # конструктор Начинки

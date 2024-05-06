@@ -1,6 +1,6 @@
 import pytest
 from selenium import webdriver
-from tests.config import URL, RESOLUTION
+from config import URL, RESOLUTION
 
 
 def browser_settings():
